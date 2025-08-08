@@ -96,7 +96,7 @@ predictive-maintenance-failure-analysis/
 │
 ├── data/                               # Raw and cleaned datasets
 │   ├── cleaned_data.db                  # SQLite database with processed data
-│   └── raw_data.csv                     # Original dataset
+│   └── ai4i2020.csv                     # Original dataset
 │
 ├── notebooks/                          # Jupyter notebooks for analysis
 │   └── predictive_maintenance_analysis.ipynb
