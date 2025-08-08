@@ -67,15 +67,28 @@ Using a synthetic dataset simulating a **milling process**, I performed **Explor
 **Requirements**:  
 `pandas`, `matplotlib`, `seaborn`, `numpy`, `sqlite3`  
 
- Step 1
- **Run the notebook**:  
-```bash
-git clone https://github.com/<your-username>/predictive-maintenance-failure-analysis.git
-cd predictive-maintenance-failure-analysis
-jupyter notebook notebooks/Project_predictive_maintenance.ipynb ´´´
-
-
-**Step 2**
+ **Run Instructions:**
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/sergie-o/Predictive-Maintenance-Project.git
+2. **Navigate to the project folder**
+   ```bash
+    cd Predictive-Maintenance-Project
+3. **Open the Jupyter Notebook**
+- If you use Jupyter Notebook:
+   ```bash
+   jupyter notebook "Project_predictive_maintenance.ipynb"
+- Or, open it in VSCode by double-clicking the file or using:
+   ```bash
+    code "Project_predictive_maintenance.ipynb"
+4. **Ensure the dataset is in the correct location**
+- The file ai4i2020.csv must be in the same directory as the notebook.
+5. Run all cells
+- Select Cell > Run All in Jupyter Notebook or VSCode to reproduce the analysis.
+## :rocket: Next Steps
+- 	Predict Failures Before They Happen – Using the identified operational       thresholds, models can be trained to recognize early warning signs and       flag machines before they reach critical failure points.
+-   Keep Machines in the Safe Zone – By continuously monitoring operational      variables (e.g., torque, tool wear, process temperature), predictive         systems can regulate performance to remain within safe operational           ranges, reducing stress on components.
+-   Enable Automated Preventive Actions – Integrating these predictions with     control s ystems could automatically trigger adjustments, slowdowns, or      maintenance requests when a threshold is exceeded.
 
 ## 📁 Repository Structure  
 predictive-maintenance-failure-analysis/
