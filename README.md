@@ -75,6 +75,7 @@ cd predictive-maintenance-failure-analysis
 jupyter notebook notebooks/predictive_maintenance_analysis.ipynb
 
 
+## 📁 Repository Structure  
 predictive-maintenance-failure-analysis/
 │
 ├── data/                               # Raw and cleaned datasets
