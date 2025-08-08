@@ -10,13 +10,13 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)  
 
 > ⚡ **Why wait for machines to fail when you can see it coming?**  
-> This project uses **failure analysis** to spot early warning signs of mechanical failure in a milling process — helping prevent downtime, extend machine life, and cut costs.  
+> This project applies **failure analysis** to spot early warning signs of mechanical failure in a milling process — helping prevent downtime, extend machine life, and reduce maintenance costs.  
 
 ---
 
 ## 📌 Overview  
-This project demonstrates how **data-driven analysis** can reduce unplanned downtime by **detecting operational thresholds** that signal machine failure risks.  
-Using a synthetic dataset simulating a **milling process**, we performed **Exploratory Data Analysis (EDA)**, correlation studies, and threshold identification to support predictive maintenance strategies.
+This project demonstrates how **data-driven analysis** can reduce unplanned downtime by detecting **operational thresholds** that signal machine failure risks.  
+Using a synthetic dataset simulating a **milling process**, I performed **Exploratory Data Analysis (EDA)**, correlation studies, and threshold identification to support predictive maintenance strategies.
 
 ---
 
@@ -31,7 +31,7 @@ Using a synthetic dataset simulating a **milling process**, we performed **Explo
   - `Rotational speed [rpm]`  
   - `Machine failure` (binary)  
   - Failure types: `TWF`, `HDF`, `PWF`, `OSF`, `RNF`  
-- **Note**: This is **synthetic data**, allowing experimentation without risk to actual equipment.
+- **Note**: This is **synthetic data**, generated using simulation models to mimic real-world machine behavior.
 
 ---
 
@@ -47,17 +47,20 @@ Using a synthetic dataset simulating a **milling process**, we performed **Explo
 2. **EDA**
    - Explored variable distributions, relationships, and failure patterns.  
 3. **Visualization**
-   - Boxplots for thresholds  
-   - Histograms for distributions  
-   - Heatmaps for correlations  
-   - Pairplots for interactions  
+   - Boxplots for threshold detection  
+   - Histograms for distribution analysis  
+   - Heatmaps for correlation checks  
+   - Pairplots for variable interactions  
+4. **SQL Analysis**
+   - Wrote queries to extract failure counts, success rates, and variable relationships directly from the database.  
 
 ---
+
 ## 📊 Key Findings  
-- **Tool Wear > 175 min** greatly increases failure likelihood.  
-- **Torque > 60 Nm**, especially when combined with high tool wear, is a strong risk factor.  
+- **Tool Wear > 175 min** significantly increases the probability of machine failure.  
+- **Torque > 60 Nm** combined with high tool wear is a strong risk factor.  
 - **Process Temperature > 310 K** often coincides with failures.  
-- Strong correlation between air and process temperature amplifies operational stress on the machine.  
+- Air temperature and process temperature are highly correlated, influencing operational stress levels.  
 
 ---
 
@@ -70,3 +73,21 @@ Using a synthetic dataset simulating a **milling process**, we performed **Explo
 git clone https://github.com/<your-username>/predictive-maintenance-failure-analysis.git
 cd predictive-maintenance-failure-analysis
 jupyter notebook notebooks/predictive_maintenance_analysis.ipynb
+
+
+predictive-maintenance-failure-analysis/
+│
+├── data/                               # Raw and cleaned datasets
+│   ├── cleaned_data.db                  # SQLite database with processed data
+│   └── raw_data.csv                     # Original dataset
+│
+├── notebooks/                          # Jupyter notebooks for analysis
+│   └── predictive_maintenance_analysis.ipynb
+│
+├── sql/                                # SQL queries for analysis
+│   └── predictive_maintenance_queries.sql
+│
+├── visuals/                            # Generated plots and charts
+│
+├── README.md                           # Project documentation
+└── requirements.txt                    # Dependencies list
