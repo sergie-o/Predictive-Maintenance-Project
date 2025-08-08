@@ -91,6 +91,7 @@ Using a synthetic dataset simulating a **milling process**, I performed **Explor
 -   Enable Automated Preventive Actions – Integrating these predictions with     control s ystems could automatically trigger adjustments, slowdowns, or      maintenance requests when a threshold is exceeded.
 
 ## 📁 Repository Structure  
+```bash
 predictive-maintenance-failure-analysis/
 │
 ├── data/                               # Raw and cleaned datasets
