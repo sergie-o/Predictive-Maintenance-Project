@@ -67,12 +67,15 @@ Using a synthetic dataset simulating a **milling process**, I performed **Explor
 **Requirements**:  
 `pandas`, `matplotlib`, `seaborn`, `numpy`, `sqlite3`  
 
-**Run the notebook**:  
+ Step 1
+ **Run the notebook**:  
 ```bash
 git clone https://github.com/<your-username>/predictive-maintenance-failure-analysis.git
 cd predictive-maintenance-failure-analysis
-jupyter notebook notebooks/predictive_maintenance_analysis.ipynb
+jupyter notebook notebooks/Project_predictive_maintenance.ipynb ´´´
 
+
+**Step 2**
 
 ## 📁 Repository Structure  
 predictive-maintenance-failure-analysis/
