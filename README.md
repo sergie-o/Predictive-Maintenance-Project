@@ -53,12 +53,11 @@ Using a synthetic dataset simulating a **milling process**, we performed **Explo
    - Pairplots for interactions  
 
 ---
-
 ## 📊 Key Findings  
-- **Tool Wear > 200 min** greatly increases failure likelihood.  
-- **Torque > 60 Nm** combined with high tool wear is a strong risk factor.  
-- **Process Temperature > 305 K** often coincides with failures.  
-- Strong correlation between air and process temperature affects operational stress.  
+- **Tool Wear > 175 min** greatly increases failure likelihood.  
+- **Torque > 60 Nm**, especially when combined with high tool wear, is a strong risk factor.  
+- **Process Temperature > 310 K** often coincides with failures.  
+- Strong correlation between air and process temperature amplifies operational stress on the machine.  
 
 ---
 
