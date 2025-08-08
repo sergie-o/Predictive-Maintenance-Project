@@ -1,5 +1,5 @@
 # ⚙ Predictive Maintenance — A Failure Analysis Approach  
-**Identifying Operational Thresholds for Predictive Maintenance**  
+**Identifying Operational Thresholds to Predict & Prevent Machine Failures**  
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)  
 ![Pandas](https://img.shields.io/badge/Library-Pandas-orange.svg)  
@@ -9,9 +9,11 @@
 ![Dataset](https://img.shields.io/badge/Data-Kaggle-blueviolet.svg)  
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)  
 
-> ⚡ **Why wait for machines to fail when you can see it coming?**  
-> This project applies **failure analysis** to spot early warning signs of mechanical failure in a milling process — helping prevent downtime, extend machine life, and reduce maintenance costs.  
+> 🚀 **Predict. Prevent. Prolong.**  
+> Unplanned downtime can cost manufacturers **thousands per minute**.  
+> This project leverages **data-driven failure analysis** to *spot early warning signs*, define **actionable operational thresholds**, and keep machines running longer, safer, and at lower cost.  
 
+---
 ---
 
 ## 📌 Overview  
