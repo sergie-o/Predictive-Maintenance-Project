@@ -63,37 +63,46 @@ Using a synthetic dataset simulating a **milling process**, I performed **Explor
 
 ---
 
-## 🔄 Update 1.0 — First Machine Learning Model  
+# 🔄 Update 1.0 — *First Machine Learning Model* 🤖⚙️  
 
-Building on the exploratory and threshold analysis, I applied my **first machine learning model (K-Nearest Neighbors, KNN)** to the predictive maintenance dataset.  
+Building on the exploratory and threshold analysis, I applied my **first machine learning model** — **K-Nearest Neighbors (KNN)** — to the predictive maintenance dataset.  
 
-### ⚙️ Approach  
-- **Features (X):** Torque, Tool Wear, Rotational Speed, Air Temperature, Process Temperature  
-- **Target (y):** Machine Failure (binary: 0 = success, 1 = failure)  
-- Applied **feature scaling (StandardScaler)** and split the dataset into training and testing sets.  
-- Implemented **baseline KNN (k=5)** for classification.  
+---
 
-### 📊 Results  
-- **Class imbalance:** Dataset is **96.6% machine success** vs **3.4% machine failure**.  
-- **Accuracy (baseline):** ~96% across k=1–25  
-- **Confusion Matrix (k=5):**  
-  - True Negatives (TN) = 1914  
-  - False Positives (FP) = 11  
-  - False Negatives (FN) = 60  
-  - True Positives (TP) = 15  
-- **Recall (failures):** 0.20 → Only 20% of actual failures detected.  
-- **Insight:** High accuracy is misleading because of class imbalance; the model struggles to identify failures.  
+## ⚙️ Approach  
+- ✨ **Features (X):** `Torque`, `Tool Wear`, `Rotational Speed`, `Air Temperature`, `Process Temperature`  
+- 🎯 **Target (y):** `Machine Failure` *(binary: 0 = success, 1 = failure)*  
+- 📏 **Preprocessing:** Applied **StandardScaler** for feature scaling + train/test split  
+- 🧮 **Model:** Implemented **baseline KNN (k=5)** for classification  
 
-### 🧾 Key Takeaways  
-- **Recall is more critical than accuracy** in predictive maintenance.  
-- False negatives (missed failures) are riskier than false positives (extra checks).  
-- Accuracy alone cannot measure model success in imbalanced datasets.  
+---
 
-### 🚀 Next Steps  
-- Adjust classification **thresholds** to prioritize recall.  
-- Experiment with **distance-weighted KNN**.  
-- Compare performance with **Logistic Regression** for better interpretability.  
+## 📊 Results  
+- ⚖️ **Class Imbalance:** **96.6% machine success** vs **3.4% machine failure**  
+- ✅ **Accuracy (baseline):** ~**96%** across k = 1–25  
+- 🧾 **Confusion Matrix (k=5):**  
+  - 🟩 **True Negatives (TN):** 1914  
+  - 🟥 **False Positives (FP):** 11  
+  - 🟦 **False Negatives (FN):** 60  
+  - 🟨 **True Positives (TP):** 15  
+- 📉 **Recall (failures):** **0.20** → Only **20% of actual failures** detected  
+- ⚡ **Insight:** High accuracy is **misleading** in imbalanced datasets; the model misses most failures  
 
+---
+
+## 🧾 Key Takeaways  
+- 🎯 In predictive maintenance, **recall matters more than accuracy**  
+- 🚨 **False negatives (missed failures)** are riskier than **false positives (extra checks)**  
+- 📊 **Accuracy alone ≠ success** when dealing with imbalance  
+
+---
+
+## 🚀 Next Steps  
+- 🔧 Adjust classification **thresholds** to boost recall  
+- 📐 Experiment with **distance-weighted KNN**  
+- 📘 Compare performance with **Logistic Regression** for interpretability  
+
+---
 ## 💻 Reproduction Guide  
 **Requirements**:  
 `pandas`, `matplotlib`, `seaborn`, `numpy`, `sqlite3`  
