@@ -96,7 +96,7 @@ Building on the exploratory and threshold analysis, I applied my **first machine
 - 📊 **Accuracy alone ≠ success** when dealing with imbalance  
 
 ---
-## 🔄 Update 2.0 – Handling Imbalanced Data & Model Optimization  
+# 🔄 Update 2.0 — *Handling Imbalanced Data & Model Optimization* ⚖️🤖  
 
 The dataset used in this project was **highly imbalanced**: only ~3% of machines experienced failures.  
 This made it difficult for baseline models to detect breakdowns, despite high overall accuracy.  
