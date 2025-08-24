@@ -128,7 +128,7 @@ To compare models, I built a **Plotly leaderboard** showing Precision, Recall, a
 This made it easy to visualize trade-offs and identify the best-performing models.  
 
 <p align="center">
-  <img src="visuals/update2_leaderboard.png" alt="Model Comparison Leaderboard" width="700">
+  <img src="https://github.com/sergie-o/Predictive-Maintenance-Project/blob/main/newplot.png" width="700">
 </p>
 
 ---
