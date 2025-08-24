@@ -96,12 +96,70 @@ Building on the exploratory and threshold analysis, I applied my **first machine
 - 📊 **Accuracy alone ≠ success** when dealing with imbalance  
 
 ---
+## 🔄 Update 2.0 – Handling Imbalanced Data & Model Optimization  
+
+The dataset used in this project was **highly imbalanced**: only ~3% of machines experienced failures.  
+This made it difficult for baseline models to detect breakdowns, despite high overall accuracy.  
+
+---
+
+### 🛠 What I implemented
+- **Baseline Models**: Logistic Regression, Random Forest, XGBoost  
+- **Data Resampling**: Applied **SMOTE** to balance failure vs. success cases  
+- **Class Weighting**: Used `scale_pos_weight` in XGBoost to address imbalance without oversampling  
+- **Evaluation Metrics**: Focused on **Precision, Recall, and F1-score** (catching failures is more important than accuracy).  
+
+---
+
+### 📊 Key Results
+- Logistic Regression → High accuracy but poor recall (missed most failures).  
+- Random Forest & XGBoost → Performed better but still missed ~35–40% of failures.  
+- **SMOTE** → Boosted recall (~80%) but lowered precision (more false alarms).  
+- **Best Trade-Off**: **XGBoost with class weighting** →  
+  - Recall: ~78%  
+  - Precision: ~64%  
+  - F1 Score: ~0.70  
+  - Best balance between catching failures and limiting false alarms.  
+
+---
+
+### 📈 Visualization
+To compare models, I built a **Plotly leaderboard** showing Precision, Recall, and F1 across all approaches.  
+This made it easy to visualize trade-offs and identify the best-performing models.  
+
+<p align="center">
+  <img src="visuals/update2_leaderboard.png" alt="Model Comparison Leaderboard" width="700">
+</p>
+
+---
+
+### 🚀 Why this matters
+In predictive maintenance, **missing a failure can be costly**.  
+Class-weighted XGBoost provided the most reliable solution, detecting failures effectively while keeping false alarms manageable.  
+
+---
 
 ## 🚀 Next Steps  
-- 🔧 Adjust classification **thresholds** to boost recall  
-- 📐 Experiment with **distance-weighted KNN**  
-- 📘 Compare performance with **Logistic Regression** for interpretability  
 
+1. **Model Explainability**  
+   - Use **SHAP** or **LIME** to explain why models predict a machine failure.  
+   - This makes the results more trustworthy and actionable for engineers.  
+
+2. **Time-Series & Temporal Patterns**  
+   - Extend the analysis to capture **time-based degradation trends** (e.g., tool wear over cycles).  
+   - Try models like **LSTM** or **Prophet** for forecasting failure risk.  
+
+3. **Feature Optimization**  
+   - Investigate **interaction features** (e.g., torque × rotational speed).  
+   - Run feature importance analysis to refine the dataset further.  
+
+4. **Advanced Imbalance Handling**  
+   - Try **ensemble resampling methods** (SMOTE + Tomek Links, ADASYN).  
+   - Compare with **cost-sensitive learning** beyond just XGBoost’s `scale_pos_weight`.  
+
+5. **Deployment Pipeline**  
+   - Build a **real-time prediction API** with FastAPI/Flask.  
+   - Simulate how predictions could integrate into a monitoring dashboard for factory use.  
 ---
 ## 💻 Reproduction Guide  
 **Requirements**:  
